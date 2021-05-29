@@ -1,0 +1,12 @@
+<div class="container" #container [style.width.px]="data.width" [style.height.px]="data.height">
+
+  <div class="container2" #container2 [style.width.px]="data2.width" [style.height.px]="data2.height">
+
+    <app-game #game></app-game>
+    <div class="resize resize__bottom--right" (resize)="onResizePreview($event)"
+      (resizeEnd)="onResize($event)" [proportionalResize]="true" [applyClass]="c" [targetElement]="container2"
+      [direction]="AngularResizeElementDirection.BOTTOM_RIGHT">
+      </div>
+  </div>
+
+</div>
